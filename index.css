@@ -39,7 +39,10 @@ body {
 
 .nav-header {
 	position: relative;
-	left: -20%;
+	/* left: -20%; */
+	display: flex;
+	flex-direction: row;
+	align-items: center;
 }
 
 .ex {
@@ -76,7 +79,7 @@ nav .navs {
 }
 
 button {
-	width: 90px;
+	width: 203px;
 	height: 40px;
 	border: 1px solid var(--grey);
 	background-color: transparent;
@@ -226,6 +229,11 @@ button.hero-but {
 	display: none;
 }
 
+.header-but {
+	position: relative;
+	right: -35rem;
+}
+
 @media screen and (width <= 1300px) {
 	.left__hero img {
 		margin-top: 1rem;
@@ -263,12 +271,13 @@ button.hero-but {
 		max-width: 100%;
 	}
 
-	.nav-header {
-		display: none;
-	}
-
 	.header-but {
-		display: none;
+		bottom: 13rem;
+		/* top: -633rem; */
+		width: 20%;
+		position: relative;
+		/* right: 0; */
+		left: -6rem;
 	}
 
 	.header {
@@ -299,17 +308,19 @@ button.hero-but {
 		margin: 0;
 		padding: 0;
 	}
+
 	h1 {
 		font-size: 2em;
 		width: auto;
 	}
+
 	.hero-p {
 		width: 375px;
-    font-weight: 500;
-    margin: auto;
-    max-width: 89%;
-    font-size: 18px;
-    margin-top: 1.5rem;
+		font-weight: 500;
+		margin: auto;
+		max-width: 89%;
+		font-size: 18px;
+		margin-top: 1.5rem;
 	}
 
 	.hero-logo {
@@ -324,5 +335,36 @@ button.hero-but {
 		width: auto;
 		max-width: 30%;
 		padding: 10px;
+	}
+
+	.nav-header {
+		position: absolute;
+		background: aliceblue;
+		width: 65%;
+		height: 256vh;
+		top: 0;
+		right: 0;
+		left: auto;
+	}
+
+	nav .navs {
+		display: flex;
+		flex-direction: column;
+		list-style: none;
+		position: relative;
+		top: -330px;
+		align-items: normal;
+	}
+
+	.navs li {
+		padding: 0.5rem 1.5rem;
+		display: flex;
+		align-items: center;
+	}
+
+	img.close__menu {
+		position: absolute;
+		top: 1rem;
+		right: 1rem;
 	}
 }
