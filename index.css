@@ -79,7 +79,7 @@ nav .navs {
 }
 
 button {
-	width: 203px;
+	width: 87px;
 	height: 40px;
 	border: 1px solid var(--grey);
 	background-color: transparent;
@@ -88,6 +88,10 @@ button {
 	cursor: pointer;
 	font-size: 14px;
 	font-weight: 700;
+}
+
+img.close__menu {
+	display: none;
 }
 
 button.login {
@@ -365,6 +369,11 @@ button.hero-but {
 	img.close__menu {
 		position: absolute;
 		top: 1rem;
+		display: block;
 		right: 1rem;
+	}
+
+	button {
+		width: 203px;
 	}
 }

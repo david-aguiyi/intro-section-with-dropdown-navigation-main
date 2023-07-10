@@ -1,38 +1,32 @@
-function toggleVisibilityFeature(element) {
-	const feature = element.querySelector(".feature__nav");
+function toggleVisibility(element, targetSelector) {
+	const target = element.querySelector(targetSelector);
 	const img = element.querySelector("img");
 	const li = element.querySelector("span");
+	const isHidden = target.style.display === "none";
 
-	if (feature.style.display === "none") {
+	if (isHidden) {
+		target.style.display = "block";
 		li.style.color = "var(--black)";
-		feature.style.display = "block";
-		feature.style.left = "-2rem";
-		feature.style.top = "2rem";
 		img.style.transform = "rotate(180deg)";
 		img.style.transition = "100ms ease-in";
+
+		if (targetSelector === ".feature__nav") {
+			target.style.left = "-2rem";
+			target.style.top = "2rem";
+		} else if (targetSelector === ".company__nav") {
+			target.style.top = "2rem";
+		}
 	} else {
-		feature.style.display = "none";
+		target.style.display = "none";
 		img.style.transform = "none";
 		li.style.color = "var(--grey)";
 	}
+}
+
+function toggleVisibilityFeature(element) {
+	toggleVisibility(element, ".feature__nav");
 }
 
 function toggleVisibilityCompany(element) {
-	const company = element.querySelector(".company__nav");
-	const img = element.querySelector("img");
-	const li = element.querySelector("span");
-
-	if (company.style.display === "none") {
-		company.style.display = "block";
-		company.style.top = "2rem";
-		li.style.color = "var(--black)";
-		img.style.transform = "rotate(180deg)";
-		img.style.transition = "100ms ease-in";
-	} else {
-		li.style.color = "var(--grey)";
-		company.style.display = "none";
-		img.style.transform = "none";
-	}
+	toggleVisibility(element, ".company__nav");
 }
-
-
