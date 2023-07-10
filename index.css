@@ -39,7 +39,7 @@ body {
 
 .nav-header {
 	position: relative;
-	/* left: -20%; */
+	left: 2%;
 	display: flex;
 	flex-direction: row;
 	align-items: center;
@@ -118,8 +118,8 @@ button.register:hover {
 .right__hero {
 	display: flex;
 	flex-direction: column;
-	margin-top: 2rem;
-	margin-left: 10.5rem;
+	margin-top: 1rem;
+	margin-left: 9.5rem;
 	padding-right: 8rem;
 }
 
@@ -168,7 +168,8 @@ button.hero-but {
 
 .left__hero {
 	margin-right: 0rem;
-	margin-top: 4rem;
+	margin-top: 2rem;
+	margin-left: -4rem;
 }
 
 .feature__nav {
@@ -235,14 +236,18 @@ button.hero-but {
 
 .header-but {
 	position: relative;
-	right: -35rem;
+	right: -30rem;
 }
 
 @media screen and (width <= 1300px) {
 	.left__hero img {
-		margin-top: 1rem;
-		margin-left: 7rem;
+		margin-top: -2rem;
 		max-width: 85%;
+	}
+
+	.header-but {
+		position: relative;
+		right: -27rem;
 	}
 }
 
@@ -277,11 +282,9 @@ button.hero-but {
 
 	.header-but {
 		bottom: 13rem;
-		/* top: -633rem; */
 		width: 20%;
 		position: relative;
-		/* right: 0; */
-		left: -6rem;
+		left: -7rem;
 	}
 
 	.header {
@@ -345,7 +348,7 @@ button.hero-but {
 		position: absolute;
 		background: aliceblue;
 		width: 65%;
-		height: 256vh;
+		height: 103vh;
 		top: 0;
 		right: 0;
 		left: auto;
@@ -356,24 +359,88 @@ button.hero-but {
 		flex-direction: column;
 		list-style: none;
 		position: relative;
-		top: -330px;
+		top: -347px;
 		align-items: normal;
 	}
 
 	.navs li {
-		padding: 0.5rem 1.5rem;
+		padding: 0.5rem 2.5rem;
 		display: flex;
 		align-items: center;
 	}
 
 	img.close__menu {
 		position: absolute;
-		top: 1rem;
+		top: 2rem;
 		display: block;
-		right: 1rem;
+		right: 3rem;
 	}
 
 	button {
 		width: 203px;
+	}
+}
+
+@media screen and (width <= 840px) {
+	nav .navs {
+		position: relative;
+		top: -403px;
+	}
+
+	img.close__menu {
+		position: absolute;
+		top: 2rem;
+		right: 3rem;
+	}
+}
+
+@media screen and (width <= 780px) {
+	nav .navs {
+		position: relative;
+		top: -312px;
+	}
+
+	img.close__menu {
+		position: absolute;
+		top: 2rem;
+		right: 4rem;
+	}
+
+	.header-but {
+		bottom: 11rem;
+		position: relative;
+	}
+}
+
+@media screen and (width <= 430px) {
+	.nav-header {
+		height: 122vh;
+	}
+	img.close__menu {
+		position: absolute;
+		top: 2rem;
+		right: 2rem;
+	}
+}
+
+@media screen and (width <= 380px) {
+	img.close__menu {
+		position: absolute;
+		top: 2rem;
+		right: 2rem;
+	}
+
+	nav .navs {
+		position: relative;
+		top: -239px;
+	}
+
+	.navs li{
+		padding: 0.5rem 1.5rem;
+	}
+
+	.header-but{
+		position: relative;
+		bottom: 8rem;
 	}
 }
